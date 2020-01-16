@@ -6,8 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.list.rados.fast_list.bind
 
 import com.mhst.material_components_poc.R
+import kotlinx.android.synthetic.main.fragment_search.*
+import kotlinx.android.synthetic.main.fragment_search.view.*
+import kotlinx.android.synthetic.main.rv_top_search_item.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,6 +44,14 @@ class SearchFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_search, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        view.rvTopSearchPlaces.bind(listOf("Yangon","Bagan","Bha An"),R.layout.rv_top_search_item){cityName ->
+            mTvHotelName.text = cityName
+        }.layoutManager(LinearLayoutManager(context).apply {
+            orientation = LinearLayoutManager.HORIZONTAL
+        })
     }
 
 
