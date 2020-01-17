@@ -155,7 +155,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="9"
+                android:layout_weight="9.5"
                 android:background="@color/colorPrimary"
                 android:text="search now" />
 
@@ -164,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:padding="8dp"
                 android:src="@drawable/ic_event_black_24dp" />
 

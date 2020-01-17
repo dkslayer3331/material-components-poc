@@ -1,11 +1,13 @@
 package com.mhst.material_components_poc.fragments
 
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.DatePicker
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.list.rados.fast_list.bind
@@ -14,6 +16,9 @@ import com.mhst.material_components_poc.R
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
 import kotlinx.android.synthetic.main.rv_top_search_item.view.*
+import java.sql.Date
+import java.text.SimpleDateFormat
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,6 +62,28 @@ class SearchFragment : Fragment() {
             val dialog = BottomSheetFragment()
             dialog.show(childFragmentManager,"geg")
         }
+
+        val format = SimpleDateFormat("yyyy-MM-dd")
+
+        view.etCheckIn.setOnClickListener {
+
+            print("hello")
+
+            val calendar = Calendar.getInstance()
+
+            val day = calendar.get(Calendar.DAY_OF_MONTH)
+            val month = calendar.get(Calendar.MONTH)
+            val year = calendar.get(Calendar.YEAR)
+
+            val dialog = DatePickerDialog(context!!,
+                DatePickerDialog.OnDateSetListener {
+                        p0, p1, p2, p3 ->
+                    //etCheckIn.setText(format.format(Date(day,month+1,year)))
+                },day,month,year)
+
+            dialog.show()
+        }
+
     }
 
 
