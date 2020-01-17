@@ -65,21 +65,31 @@ class SearchFragment : Fragment() {
 
         val format = SimpleDateFormat("yyyy-MM-dd")
 
+        val calendar = Calendar.getInstance()
+
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+        val month = calendar.get(Calendar.MONTH)
+        val year = calendar.get(Calendar.YEAR)
+
         view.etCheckIn.setOnClickListener {
 
-            print("hello")
-
-            val calendar = Calendar.getInstance()
-
-            val day = calendar.get(Calendar.DAY_OF_MONTH)
-            val month = calendar.get(Calendar.MONTH)
-            val year = calendar.get(Calendar.YEAR)
+            print("gege")
 
             val dialog = DatePickerDialog(context!!,
                 DatePickerDialog.OnDateSetListener {
-                        p0, p1, p2, p3 ->
-                    //etCheckIn.setText(format.format(Date(day,month+1,year)))
-                },day,month,year)
+                        view, y, m, d ->
+                    etCheckIn.setText("$d-${m+1}-$y")
+                },year,month,day)
+
+            dialog.show()
+        }
+
+        view.etCheckOut.setOnClickListener {
+            val dialog = DatePickerDialog(context!!,
+                DatePickerDialog.OnDateSetListener {
+                        view, y, m, d ->
+                    etCheckOut.setText("$d-${m+1}-$y")
+                },year,month,day)
 
             dialog.show()
         }
