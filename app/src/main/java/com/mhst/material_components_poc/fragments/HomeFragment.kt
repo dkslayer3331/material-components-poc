@@ -41,23 +41,23 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        tabViewPagerAdapter = TabLayoutPagerAdapter(activity!!)
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        tabViewPagerAdapter = TabLayoutPagerAdapter(this)
+
         vpCategory.adapter = tabViewPagerAdapter
 
         TabLayoutMediator(tLcategory,vpCategory){tab, position ->
             when(position){
-                0 -> tab.text = "NearBy"
-                1 -> tab.text = "Popular"
-                2 -> tab.text = "All"
-                else -> tab.text = "NearBy"
+                0 -> tab.text = "NearBy" //NearBy
+                1 -> tab.text = "Popular" //Popular
+                2 -> tab.text = "All" //All
+                else -> tab.text = "NearBy" //NearBy
             }
         }.attach()
-
-
 
     }
 

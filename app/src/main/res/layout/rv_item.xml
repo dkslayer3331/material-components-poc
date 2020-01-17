@@ -85,6 +85,29 @@
             app:layout_constraintEnd_toEndOf="@+id/tvDiscount"
             app:layout_constraintTop_toBottomOf="@+id/tvDiscount" />
 
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:rating="1"
+            android:progressTint="#ffd500"
+            android:numStars="1"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/materialTextView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="4.5(21 ratings)"
+            android:textColor="@color/design_default_color_background"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

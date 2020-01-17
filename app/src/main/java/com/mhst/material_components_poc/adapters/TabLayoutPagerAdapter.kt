@@ -7,8 +7,8 @@ import com.mhst.material_components_poc.fragments.AllFragment
 import com.mhst.material_components_poc.fragments.NearbyFragment
 import com.mhst.material_components_poc.fragments.PopularFragment
 
-class TabLayoutPagerAdapter(fragmentActivity: FragmentActivity) :
-    FragmentStateAdapter(fragmentActivity) {
+class TabLayoutPagerAdapter(fragment : Fragment):
+    FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int {
         return 3
