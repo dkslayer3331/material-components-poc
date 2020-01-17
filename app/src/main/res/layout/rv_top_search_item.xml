@@ -17,10 +17,11 @@
             android:layout_width="0dp"
             android:layout_height="160dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/city_dummy" />
@@ -57,6 +58,28 @@
             app:layout_constraintEnd_toEndOf="@+id/mTvHotelName"
             app:layout_constraintStart_toStartOf="@+id/mTvHotelName"
             app:layout_constraintTop_toBottomOf="@+id/mTvHotelName" />
+
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:numStars="1"
+            android:rating="1"
+            android:progressTint="#ffd500"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.3(21 ratings)"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar2"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar2"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

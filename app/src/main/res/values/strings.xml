@@ -8,4 +8,11 @@
         <item>Dhaka</item>
         <item>Yangon</item>
     </string-array>
+
+    <string-array name="price_ranges">
+        <item>$700-$800</item>
+        <item>$800-$900</item>
+        <item>$900-$1000</item>
+    </string-array>
+
 </resources>

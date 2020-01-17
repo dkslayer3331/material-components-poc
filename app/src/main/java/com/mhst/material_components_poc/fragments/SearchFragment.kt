@@ -52,6 +52,11 @@ class SearchFragment : Fragment() {
         }.layoutManager(LinearLayoutManager(context).apply {
             orientation = LinearLayoutManager.HORIZONTAL
         })
+
+        chip4.setOnClickListener {
+            val dialog = BottomSheetFragment()
+            dialog.show(childFragmentManager,"geg")
+        }
     }
 
 

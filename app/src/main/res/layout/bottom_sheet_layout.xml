@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/btnCancel"
+            android:text="Cancel"
+            android:textColor="@color/purple"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Filter"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/btnReset"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textColor="@color/purple"
+            android:gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="SORT BY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:entries="@array/price_ranges"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:text="RATING"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+   <HorizontalScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_margin="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <ToggleButton
+               android:text="NONE"
+               android:textOn="NONE"
+               android:textOff="NONE"
+               android:background="@drawable/toggle_selector"
+               android:layout_width="55dp"
+               android:layout_height="wrap_content"/>
+
+           <ToggleButton
+               android:text="1"
+               android:textOn="1"
+               android:textOff="1"
+               android:drawableEnd="@drawable/ic_star_black_24dp"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/toggle_selector"
+               android:paddingRight="8dp"
+               android:paddingLeft="8dp"
+               android:layout_width="55dp"
+               android:layout_height="wrap_content"/>
+
+           <ToggleButton
+               android:text="2"
+               android:textOn="2"
+               android:textOff="2"
+               android:drawableEnd="@drawable/ic_star_black_24dp"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/toggle_selector"
+               android:paddingRight="8dp"
+               android:paddingLeft="8dp"
+               android:layout_width="55dp"
+               android:layout_height="wrap_content"/>
+
+           <ToggleButton
+               android:text="3"
+               android:textOn="3"
+               android:textOff="3"
+               android:drawableEnd="@drawable/ic_star_black_24dp"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/toggle_selector"
+               android:paddingRight="8dp"
+               android:paddingLeft="8dp"
+               android:layout_width="55dp"
+               android:layout_height="wrap_content"/>
+
+           <ToggleButton
+               android:text="4"
+               android:textOn="4"
+               android:textOff="4"
+               android:drawableEnd="@drawable/ic_star_black_24dp"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/toggle_selector"
+               android:paddingRight="8dp"
+               android:paddingLeft="8dp"
+               android:layout_width="55dp"
+               android:layout_height="wrap_content"/>
+
+           <ToggleButton
+               android:text="5"
+               android:textOn="5"
+               android:textOff="5"
+               android:drawableEnd="@drawable/ic_star_black_24dp"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/toggle_selector"
+               android:paddingRight="8dp"
+               android:paddingLeft="8dp"
+               android:layout_width="55dp"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
+   </HorizontalScrollView>
+
+    <TextView
+        android:text="PRICE RANGE"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:backgroundTint="@color/purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
