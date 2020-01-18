@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
                     0 ->    bottomNavigation.selectedItemId = R.id.action_home
                     1 ->    bottomNavigation.selectedItemId = R.id.action_search
                     2 ->    bottomNavigation.selectedItemId = R.id.action_event
+                    3 ->    bottomNavigation.selectedItemId = R.id.action_bookmark
                 }
             }
         })
