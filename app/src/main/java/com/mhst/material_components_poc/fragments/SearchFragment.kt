@@ -2,14 +2,13 @@ package com.mhst.material_components_poc.fragments
 
 
 import android.app.DatePickerDialog
+import android.icu.util.LocaleData
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.list.rados.fast_list.bind
 
 import com.mhst.material_components_poc.R
@@ -63,7 +62,7 @@ class SearchFragment : Fragment() {
             dialog.show(childFragmentManager,"geg")
         }
 
-        val format = SimpleDateFormat("yyyy-MM-dd")
+        val formatter = SimpleDateFormat("dd MMMM")
 
         val calendar = Calendar.getInstance()
 
@@ -78,7 +77,8 @@ class SearchFragment : Fragment() {
             val dialog = DatePickerDialog(context!!,
                 DatePickerDialog.OnDateSetListener {
                         view, y, m, d ->
-                    etCheckIn.setText("$d-${m+1}-$y")
+                    val dateInText = formatter.format(Date(y,m,d))
+                    etCheckIn.setText("$dateInText $y")
                 },year,month,day)
 
             dialog.show()
@@ -88,7 +88,8 @@ class SearchFragment : Fragment() {
             val dialog = DatePickerDialog(context!!,
                 DatePickerDialog.OnDateSetListener {
                         view, y, m, d ->
-                    etCheckOut.setText("$d-${m+1}-$y")
+                    val dateInText = formatter.format(Date(y,m,d))
+                    etCheckOut.setText("$dateInText, $y")
                 },year,month,day)
 
             dialog.show()
