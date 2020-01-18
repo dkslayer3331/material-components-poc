@@ -15,13 +15,13 @@
             android:textColor="@color/purple"
             android:layout_weight="1"
             android:gravity="start"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/margin_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:text="Filter"
+            android:text="@string/label_filter"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="@dimen/text_heading_1x"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_width="wrap_content"
@@ -32,35 +32,35 @@
             android:text="Reset"
             android:textColor="@color/purple"
             android:gravity="end"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/margin_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:text="SORT BY"
+        android:textSize="@dimen/text_regular_2x"
+        android:text="@string/label_sort_by"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Spinner
         android:entries="@array/price_ranges"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin_medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:textStyle="bold"
         android:text="RATING"
-        android:textSize="16sp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="16dp"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -68,87 +68,87 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
        <LinearLayout
-           android:layout_margin="16dp"
+           android:layout_margin="@dimen/margin_medium_2"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal">
 
            <ToggleButton
-               android:text="NONE"
-               android:textOn="NONE"
-               android:textOff="NONE"
+               android:text="@string/none"
+               android:textOn="@string/none"
+               android:textOff="@string/none"
                android:background="@drawable/toggle_selector"
-               android:layout_width="55dp"
+               android:layout_width="@dimen/toggle_btn_width"
                android:layout_height="wrap_content"/>
 
            <ToggleButton
-               android:text="1"
-               android:textOn="1"
-               android:textOff="1"
+               android:text="@string/_1"
+               android:textOn="@string/_1"
+               android:textOff="@string/_1"
                android:drawableEnd="@drawable/ic_star_black_24dp"
                android:layout_marginStart="8dp"
                android:background="@drawable/toggle_selector"
-               android:paddingRight="8dp"
-               android:paddingLeft="8dp"
-               android:layout_width="55dp"
+               android:paddingRight="@dimen/margin_medium"
+               android:paddingLeft="@dimen/margin_medium"
+               android:layout_width="@dimen/toggle_btn_width"
                android:layout_height="wrap_content"/>
 
            <ToggleButton
-               android:text="2"
-               android:textOn="2"
-               android:textOff="2"
+               android:text="@string/_2"
+               android:textOn="@string/_2"
+               android:textOff="@string/_2"
                android:drawableEnd="@drawable/ic_star_black_24dp"
-               android:layout_marginStart="8dp"
+               android:layout_marginStart="@dimen/margin_medium"
                android:background="@drawable/toggle_selector"
-               android:paddingRight="8dp"
-               android:paddingLeft="8dp"
-               android:layout_width="55dp"
+               android:paddingRight="@dimen/margin_medium"
+               android:paddingLeft="@dimen/margin_medium"
+               android:layout_width="@dimen/toggle_btn_width"
                android:layout_height="wrap_content"/>
 
            <ToggleButton
-               android:text="3"
-               android:textOn="3"
-               android:textOff="3"
+               android:text="@string/_3"
+               android:textOn="@string/_3"
+               android:textOff="@string/_3"
                android:drawableEnd="@drawable/ic_star_black_24dp"
-               android:layout_marginStart="8dp"
+               android:layout_marginStart="@dimen/margin_medium"
                android:background="@drawable/toggle_selector"
-               android:paddingRight="8dp"
-               android:paddingLeft="8dp"
-               android:layout_width="55dp"
+               android:paddingRight="@dimen/margin_medium"
+               android:paddingLeft="@dimen/margin_medium"
+               android:layout_width="@dimen/toggle_btn_width"
                android:layout_height="wrap_content"/>
 
            <ToggleButton
-               android:text="4"
-               android:textOn="4"
-               android:textOff="4"
+               android:text="@string/_4"
+               android:textOn="@string/_4"
+               android:textOff="@string/_4"
                android:drawableEnd="@drawable/ic_star_black_24dp"
-               android:layout_marginStart="8dp"
+               android:layout_marginStart="@dimen/margin_medium"
                android:background="@drawable/toggle_selector"
-               android:paddingRight="8dp"
-               android:paddingLeft="8dp"
-               android:layout_width="55dp"
+               android:paddingRight="@dimen/margin_medium"
+               android:paddingLeft="@dimen/margin_medium"
+               android:layout_width="@dimen/toggle_btn_width"
                android:layout_height="wrap_content"/>
 
            <ToggleButton
-               android:text="5"
-               android:textOn="5"
-               android:textOff="5"
+               android:text="@string/_5"
+               android:textOn="@string/_5"
+               android:textOff="@string/_5"
                android:drawableEnd="@drawable/ic_star_black_24dp"
-               android:layout_marginStart="8dp"
+               android:layout_marginStart="@dimen/margin_medium"
                android:background="@drawable/toggle_selector"
-               android:paddingRight="8dp"
-               android:paddingLeft="8dp"
-               android:layout_width="55dp"
+               android:paddingRight="@dimen/margin_medium"
+               android:paddingLeft="@dimen/margin_medium"
+               android:layout_width="@dimen/toggle_btn_width"
                android:layout_height="wrap_content"/>
 
        </LinearLayout>
    </HorizontalScrollView>
 
     <TextView
-        android:text="PRICE RANGE"
-        android:layout_margin="16dp"
+        android:text="@string/price_range"
+        android:layout_margin="@dimen/margin_medium_2"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="@dimen/text_regular_3x"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -157,21 +157,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin_medium"
         android:weightSum="10">
 
         <com.google.android.material.button.MaterialButton
             android:layout_weight="9.5"
-            android:text="FILTER NOW"
+            android:text="@string/label_filter_now"
             android:layout_width="wrap_content"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/margin_medium"
             android:layout_height="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
             style="@style/Widget.MaterialComponents.Button"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="@dimen/margin_medium"
             android:src="@drawable/ic_check_circle_black_24dp"
-            android:layout_width="65dp"
+            android:layout_width="@dimen/image_btn_width"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>

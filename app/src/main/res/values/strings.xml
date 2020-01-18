@@ -3,6 +3,28 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_location">Location</string>
+    <string name="label_sort_by">SORT BY</string>
+    <string name="label_filter">Filter</string>
+    <string name="none">NONE</string>
+    <string name="_1">1</string>
+    <string name="label_filter_now">FILTER NOW</string>
+    <string name="_5">5</string>
+    <string name="_4">4</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="price_range">PRICE RANGE</string>
+    <string name="dhaka">Dhaka</string>
+    <string name="explore">Explore</string>
+    <string name="label_filter_two">filter</string>
+    <string name="label_top_searches">TOP SEARCHES</string>
+    <string name="rating_dummy_text">4.3(21 ratings)</string>
+    <string name="location_dummy">Botataung , Yangon</string>
+    <string name="dummy_tulip_hotel">Tulip Hotel</string>
+    <string name="dummy_price_per_day">$89/day</string>
+    <string name="dummy_services">Free Wifi , Swimming</string>
+    <string name="dummy_city_name">The Westeen</string>
+    <string name="dummy_discount">GET 50% off</string>
     <string-array name="cities">
         <item>NewYork</item>
         <item>Dhaka</item>

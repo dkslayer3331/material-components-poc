@@ -17,9 +17,9 @@
             android:id="@+id/chip4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:padding="8dp"
-            android:text="filter"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/label_filter_two"
             app:chipIcon="@drawable/ic_event_black_24dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,9 +29,9 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Explore"
-            android:textSize="24sp"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:text="@string/explore"
+            android:textSize="@dimen/margin_large"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,8 +40,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_large"
             app:layout_constraintStart_toStartOf="@id/textView"
             app:layout_constraintTop_toBottomOf="@+id/chip4">
 
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_event_black_24dp"
                 android:hint="Location"
-                android:padding="8dp" />
+                android:padding="@dimen/margin_medium" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,7 +59,7 @@
             android:id="@+id/linearLayoutOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/margin_medium_2"
             android:orientation="horizontal"
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +87,7 @@
                 android:id="@+id/tlCheckOut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="@dimen/margin_medium"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -104,7 +104,7 @@
             android:id="@+id/linearLayoutTwo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/margin_medium_2"
             android:orientation="horizontal"
             android:weightSum="2"
             app:layout_constraintTop_toBottomOf="@id/linearLayoutOne">
@@ -113,7 +113,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="@dimen/margin_medium"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -167,7 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="0.5"
-                android:padding="8dp"
+                android:padding="@dimen/margin_medium"
                 android:src="@drawable/ic_event_black_24dp" />
 
         </LinearLayout>
@@ -176,11 +176,11 @@
             android:id="@+id/textView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="TOP SEARCHES"
-            android:textSize="18sp"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:text="@string/label_top_searches"
+            android:textSize="@dimen/text_regular_3x"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutThree" />
@@ -189,7 +189,7 @@
             android:id="@+id/rvTopSearchPlaces"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/margin_medium_2"
             app:layout_constraintTop_toBottomOf="@id/textView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
