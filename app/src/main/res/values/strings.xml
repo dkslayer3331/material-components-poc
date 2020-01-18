@@ -25,6 +25,12 @@
     <string name="dummy_services">Free Wifi , Swimming</string>
     <string name="dummy_city_name">The Westeen</string>
     <string name="dummy_discount">GET 50% off</string>
+    <string name="label_recent_searches">recent searches</string>
+    <string name="hint_check_in">Check In</string>
+    <string name="hint_check_out">Check Out</string>
+    <string name="hint_count">Count</string>
+    <string name="hint_rooms">Rooms</string>
+    <string name="label_search_now">search now</string>
     <string-array name="cities">
         <item>NewYork</item>
         <item>Dhaka</item>

@@ -17,13 +17,18 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"/>
 
-       <com.google.android.material.bottomnavigation.BottomNavigationView
-           android:id="@+id/bottomNavigation"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           app:menu="@menu/bottom_nav_menu"
-           android:layout_alignParentBottom="true"/>
+
 
    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"/>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
