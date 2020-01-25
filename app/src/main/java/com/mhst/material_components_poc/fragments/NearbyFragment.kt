@@ -6,9 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.list.rados.fast_list.bind
 
 import com.mhst.material_components_poc.R
+import com.mhst.material_components_poc.adapters.BaseRecyclerAdapter
+import com.mhst.material_components_poc.adapters.NearByRecyclerAdapter
+import com.mhst.material_components_poc.models.NearByVO
 import kotlinx.android.synthetic.main.fragment_nearby.*
 import kotlinx.android.synthetic.main.rv_item.view.*
 
@@ -27,6 +31,14 @@ class NearbyFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var adapter : NearByRecyclerAdapter
+
+    val dummyData = mutableListOf<NearByVO>(
+        NearByVO("Yangon","Yangon, Myanamr","15% discount"),
+        NearByVO("Mandalay","Mandalay, Myanamr","25% discount"),
+        NearByVO("Pathein","Pathein, Myanamr","35% discount")
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -44,9 +56,19 @@ class NearbyFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        rvNearByPlaces.bind(listOf("Mandalay","Yangon","NayPyiTaw","MawLaMyaing"),R.layout.rv_item){ cityName ->
-            tvPlaceName.text = cityName
+//        rvNearByPlaces.bind(listOf("Mandalay","Yangon","NayPyiTaw","MawLaMyaing"),R.layout.rv_item){ cityName ->
+//            tvPlaceName.text = cityName
+//        }
+        adapter = NearByRecyclerAdapter()
+
+        adapter.setNewData(dummyData)
+
+        rvNearByPlaces.layoutManager = LinearLayoutManager(context).apply {
+            orientation = LinearLayoutManager.VERTICAL
         }
+
+        rvNearByPlaces.adapter = adapter
+
     }
 
 

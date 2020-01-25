@@ -8,10 +8,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.list.rados.fast_list.bind
 
 import com.mhst.material_components_poc.R
+import com.mhst.material_components_poc.adapters.TopSearchRecyclerAdapter
+import com.mhst.material_components_poc.models.TopSearchVO
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
 import kotlinx.android.synthetic.main.rv_top_search_item.view.*
@@ -34,6 +37,14 @@ class SearchFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var adapter: TopSearchRecyclerAdapter
+
+    val dummyData = mutableListOf<TopSearchVO>(
+        TopSearchVO("Yangon","Yangon, Myanmar"),
+        TopSearchVO("Mandalay","Mandalay, Myanmar"),
+        TopSearchVO("Mon Ywa","Mon Ywa, Myanmar")
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -51,11 +62,21 @@ class SearchFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        view.rvTopSearchPlaces.bind(listOf("Yangon","Bagan","Bha An"),R.layout.rv_top_search_item){cityName ->
-            mTvHotelName.text = cityName
-        }.layoutManager(LinearLayoutManager(context).apply {
+//        view.rvTopSearchPlaces.bind(listOf("Yangon","Bagan","Bha An"),R.layout.rv_top_search_item){cityName ->
+//            mTvHotelName.text = cityName
+//        }.layoutManager(LinearLayoutManager(context).apply {
+//            orientation = LinearLayoutManager.HORIZONTAL
+//        })
+
+        adapter = TopSearchRecyclerAdapter()
+
+        adapter.setNewData(dummyData)
+
+        view.rvTopSearchPlaces.layoutManager = LinearLayoutManager(context).apply {
             orientation = LinearLayoutManager.HORIZONTAL
-        })
+        }
+
+        view.rvTopSearchPlaces.adapter = adapter
 
         chip4.setOnClickListener {
             val dialog = BottomSheetFragment()
@@ -71,8 +92,6 @@ class SearchFragment : Fragment() {
         val year = calendar.get(Calendar.YEAR)
 
         view.etCheckIn.setOnClickListener {
-
-            print("gege")
 
             val dialog = DatePickerDialog(context!!,
                 DatePickerDialog.OnDateSetListener {
